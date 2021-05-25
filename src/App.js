@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router , Switch , Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
+import Dashboard from './components/dashboard/Dashboard'
 
 class App extends Component {
   render () {
@@ -8,7 +9,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navbar/>
-
+          <Switch>
+            <Route to='/' component={Dashboard}   />
+          </Switch>
         </div>
       </Router>
     );
